@@ -1,25 +1,3 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import {
-    Bars3Icon,
-    CalendarIcon,
-    ChartBarIcon,
-    FolderIcon,
-    HomeIcon,
-    InboxIcon,
-    UsersIcon,
-    XMarkIcon,
-} from '@heroicons/react/24/outline'
-
-const navigation = [
-    { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-    { name: 'Musicality', href: '#', icon: ChartBarIcon, current: false },
-    { name: 'Shines', href: '#', icon: UsersIcon, current: false },
-    { name: 'Positions', href: '#', icon: FolderIcon, current: false },
-    { name: 'Patterns', href: '#', icon: CalendarIcon, current: false },
-    { name: 'Combinations', href: '#', icon: InboxIcon, current: false },
-    { name: 'Practice', href: '#', icon: ChartBarIcon, current: false },
-]
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -109,7 +87,7 @@ export default function Sidebar() {
                                         </nav>
                                     </div>
                                     <div className="flex flex-shrink-0 bg-gray-700 p-4">
-                                        <a href="DanceSoftware/frontend/src/assets/Sidebar.js#" className="group block flex-shrink-0">
+                                        <a href="DanceSoftware/frontend/src/Sidebar.js#" className="group block flex-shrink-0">
                                             <div className="flex items-center">
                                                 <div>
                                                     <img
@@ -167,7 +145,7 @@ export default function Sidebar() {
                             </nav>
                         </div>
                         <div className="flex flex-shrink-0 bg-gray-700 p-4">
-                            <a href="DanceSoftware/frontend/src/assets/Sidebar.js#" className="group block w-full flex-shrink-0">
+                            <a href="DanceSoftware/frontend/src/Sidebar.js#" className="group block w-full flex-shrink-0">
                                 <div className="flex items-center">
                                     <div>
                                         <img
