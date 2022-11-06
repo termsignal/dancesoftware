@@ -11,6 +11,7 @@ import {
     UsersIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
+import Dashboard from "./Dashboard/Dashboard"
 
 const navigation = [
     { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -20,6 +21,7 @@ const navigation = [
     { name: 'Patterns', href: '#', icon: CalendarIcon, current: false },
     { name: 'Combinations', href: '#', icon: InboxIcon, current: false },
     { name: 'Practice', href: '#', icon: ChartBarIcon, current: false },
+    { name: 'NewSideBarItem', href: '#', icon: ChartBarIcon, current: false },
 ]
 
 function classNames(...classes) {
@@ -204,9 +206,19 @@ function App() {
                             </div>
                             <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                                 {/* Replace with your content */}
+                                <Dashboard />
+                                {/* <div>
+
+
+
+                                </div> */}
+                                {/* <div>
+                                    New Content
+                                </div>
+       
                                 <div className="py-4">
                                     <div className="h-96 rounded-lg border-4 border-dashed border-gray-200" />
-                                </div>
+                                </div> */}
                                 {/* /End replace */}
                             </div>
                         </div>
