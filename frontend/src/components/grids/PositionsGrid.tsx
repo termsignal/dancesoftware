@@ -28,6 +28,7 @@ export default function PositionsGrid() {
 
         setPositions(jsonGotPositionResponse.positions);
         setTotal(jsonGotPositionResponse.total);
+
         if (modalShow) {
           if (modalPrevOrNext.current === "next") {
             setPosition(jsonGotPositionResponse.positions[0]);

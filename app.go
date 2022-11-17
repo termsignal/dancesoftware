@@ -222,8 +222,9 @@ func (a *App) GetBasics(idx int, limit int) string {
 			&name,
 			&description,
 			&image,
-			&tags,
 			&video,
+			&tags,
+
 		)
 		if err != nil {
 			log.Fatal(err)

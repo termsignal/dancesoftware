@@ -3,7 +3,7 @@ import Pagination from "./Pagination";
 import { GetBasics } from "../../../wailsjs/go/main/App";
 // import { main } from "../../../wailsjs/go/models";
 // import BaseModal from "../PositionModal/BaseModal";
-import PositionModal from "../modals/BasicModal";
+import BasicModal from "../modals/BasicModal";
 
 export default function Basics() {
   const pageSize = 10;
@@ -20,7 +20,8 @@ export default function Basics() {
         console.log("gotBasics response---->", response);
         let jsonGotBasicsResponse = JSON.parse(response);
 
-        console.log("jsonGotBasics------->",
+        console.log(
+            "jsonGotBasics------->",
             jsonGotBasicsResponse,
             jsonGotBasicsResponse.total
         );
@@ -84,7 +85,7 @@ export default function Basics() {
   return (
     <>
       {/* <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-2xl font-semibold text-gray-900">Basics</h1>
+        <h1 className="text-2xl font-semibold text-gray-900">Pasics</h1>
       </div> */}
       <div className="grid grid-cols-1 mb-10 gap-4 sm:grid-cols-2">
         {basics.map((basic) => (
@@ -132,7 +133,7 @@ export default function Basics() {
           setPageIndex={setPageIndex}
         />
       )}
-      <PositionModal
+      <BasicModal
         basic={basic}
         modalShow={modalShow}
         setModalShow={setModalShow}
