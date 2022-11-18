@@ -83,63 +83,63 @@ export default function Basics() {
   };
 
   return (
-    <>
-      {/* <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <>
+        {/* <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl font-semibold text-gray-900">Pasics</h1>
       </div> */}
-      <div className="grid grid-cols-1 mb-10 gap-4 sm:grid-cols-2">
-        {basics.map((basic) => (
-          <div
-            onClick={() => onClickBasic(basic)}
-            key={basic.id}
-            className="relative flex items-center space-x-3 rounded-lg  bg-gray-800 px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:bg-gray-700"
-          >
-            <div className="flex-shrink-0">
-              <img
-                className="h-10 w-10 rounded-full"
-                // src={basic.picture.String}
-                src="https://storage.googleapis.com/isidros-dev/pngwing.com.png"
-                alt=""
-              />
-            </div>
-            {/* <p>{basic.id}</p>  */}
+        <div className="grid grid-cols-1 mb-10 gap-4 sm:grid-cols-2">
+          {basics.map((basic) => (
+              <div
+                  onClick={() => onClickBasic(basic)}
+                  key={basic.id}
+                  className="relative flex items-center space-x-3 rounded-lg  bg-gray-800 px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:bg-gray-700"
+              >
+                <div className="flex-shrink-0">
+                  <img
+                      className="h-10 w-10 rounded-full"
+                      // src={basic.picture.String}
+                      src="https://storage.googleapis.com/isidros-dev/pngwing.com.png"
+                      alt=""
+                  />
+                </div>
+                {/* <p>{basic.id}</p>  */}
 
-            <div className="min-w-0 flex-1">
-              {/* <a href="#" className="focus:outline-none"> */}
-              <div>
-                <span className="absolute inset-0" aria-hidden="true" />
-                <p className="text-sm font-medium text-gray-200">
-                  {basic.id} : {basic.name}
-                </p>
-                <p className="truncate text-sm text-gray-400">
-                  {/*{basic.video.String}*/}
-                  {/*{basic.tags.String}*/}
-                  {/*{basic.description.String}*/}
-                  {/*{basic.image.String}*/}
-                </p>
+                <div className="min-w-0 flex-1">
+                  {/* <a href="#" className="focus:outline-none"> */}
+                  <div>
+                    <span className="absolute inset-0" aria-hidden="true" />
+                    <p className="text-sm font-medium text-gray-200">
+                      {basic.id} : {basic.name}
+                    </p>
+                    <p className="truncate text-sm text-gray-400">
+                      {/*{basic.video.String}*/}
+                      {/*{basic.tags.String}*/}
+                      {/*{basic.description.String}*/}
+                      {/*{basic.image.String}*/}
+                    </p>
+                  </div>
+                  {/* </a> */}
+                </div>
               </div>
-              {/* </a> */}
-            </div>
-          </div>
-        ))}
-      </div>
-      {total && (
-        <Pagination
-          previousPage={previousPage}
-          nextPage={nextPage}
-          pageIndex={pageIndex}
-          total={total}
-          pageSize={pageSize}
-          setPageIndex={setPageIndex}
+          ))}
+        </div>
+        {total && (
+            <Pagination
+                previousPage={previousPage}
+                nextPage={nextPage}
+                pageIndex={pageIndex}
+                total={total}
+                pageSize={pageSize}
+                setPageIndex={setPageIndex}
+            />
+        )}
+        <BasicModal
+            basic={basic}
+            modalShow={modalShow}
+            setModalShow={setModalShow}
+            previousBasic={previousBasic}
+            nextBasic={nextBasic}
         />
-      )}
-      <BasicModal
-        basic={basic}
-        modalShow={modalShow}
-        setModalShow={setModalShow}
-        previousBasic={previousBasic}
-        nextBasic={nextBasic}
-      />
-    </>
+      </>
   );
 }

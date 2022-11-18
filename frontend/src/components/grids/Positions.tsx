@@ -5,7 +5,7 @@ import { GetPositions } from "../../../wailsjs/go/main/App";
 // import BaseModal from "../PositionModal/BaseModal";
 import PositionModal from "../modals/PositionModal";
 
-export default function PositionsGrid() {
+export default function Positions() {
   const pageSize = 10;
   const [modalShow, setModalShow] = useState(false);
   const [positions, setPositions] = useState<any>([]);
