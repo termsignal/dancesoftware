@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Pagination from "./Pagination";
 import { GetPositions } from "../../../wailsjs/go/main/App";
 // import { main } from "../../../wailsjs/go/models";
-// import BaseModal from "../Modal/BaseModal";
-import Modal from "../layout/Modal";
+// import BaseModal from "../PositionModal/BaseModal";
+import PositionModal from "../modals/PositionModal";
 
-export default function PositionsGrid() {
+export default function Positions() {
   const pageSize = 10;
   const [modalShow, setModalShow] = useState(false);
   const [positions, setPositions] = useState<any>([]);
@@ -15,7 +15,6 @@ export default function PositionsGrid() {
   const modalPrevOrNext = useRef("");
 
   useEffect(() => {
-    // console.log("position");
     try {
       GetPositions(pageIndex, pageSize).then((response) => {
         console.log("gotPosition response---->", response);
@@ -29,6 +28,7 @@ export default function PositionsGrid() {
 
         setPositions(jsonGotPositionResponse.positions);
         setTotal(jsonGotPositionResponse.total);
+
         if (modalShow) {
           if (modalPrevOrNext.current === "next") {
             setPosition(jsonGotPositionResponse.positions[0]);
@@ -39,9 +39,6 @@ export default function PositionsGrid() {
           }
         }
       });
-      // setPositions(gotPosition)
-      // console.log("gotPosition", gotPosition.result);
-      // console.log("gotPosition",JSON.parse( gotPosition.result));
     } catch (err) {
       console.log("err", err);
     }
@@ -133,7 +130,7 @@ export default function PositionsGrid() {
           setPageIndex={setPageIndex}
         />
       )}
-      <Modal
+      <PositionModal
         position={position}
         modalShow={modalShow}
         setModalShow={setModalShow}

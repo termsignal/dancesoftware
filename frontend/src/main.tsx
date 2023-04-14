@@ -5,10 +5,10 @@ import "./index.css";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Music from "./components/pages/Music/Music";
 import Practice from "./components/pages/Practice/Practice";
-import Combinations from "./components/grids/CombinationsGrid";
-import Position from "./components/grids/PositionsGrid";
-import Patterns from "./components/grids/PatternsGrid";
-import Shines from "./components/grids/Shines";
+import Combinations from "./components/grids/Combinations";
+import Position from "./components/grids/Positions";
+import Patterns from "./components/grids/Patterns";
+import Basics from "./components/grids/Basics";
 
 import { createHashRouter, RouterProvider, Route } from "react-router-dom";
 
@@ -42,8 +42,8 @@ const router = createHashRouter([
         element: <Patterns />,
       },
       {
-        path: "shines",
-        element: <Shines />,
+        path: "basics",
+        element: <Basics />,
       },
     ],
   },
